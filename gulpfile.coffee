@@ -29,6 +29,14 @@ gulp.task "default", [
   "webserver"
 ], -> gulp
 
+gulp.task "build", [
+  "webpack"
+  "stylus"
+  "mustache"
+  "data"
+  "img"
+], -> gulp
+
 # Remove previous git data and init fresh
 ###
 gulp.task 'init', plugins.shell.task([
