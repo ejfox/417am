@@ -10,6 +10,7 @@ seed = Date.now()
 _ = require 'lodash'
 clColors = require('nice-color-palettes/100')
 deg2rad = Math.PI / 180
+Chance = require 'chance'
 
 # Require GenArt which is the skeleton
 # around which all ArtScripts are built
@@ -20,11 +21,11 @@ GenArt = require './GenArt'
 
 # Set some options for our artscript
 options = {
-  count: 1
-  # count: 3
+  # count: 1
+  count: 2
   randomizeCount: false
   numTicks: 55555
-  randomizeTicks: true
+  randomizeTicks: false
   bgColor: 'white'
   fillColor: 'black'
   constrainEdges: true
@@ -39,6 +40,7 @@ art = new GenArt(seed, options)
 # This is called at the start of the script and creates
 # The particles which are manipulated and drawn every tick
 art.makeParticles = ->
+  @chance = new Chance(+ new Date()) # init chance.js - chancejs.com
   @ctx.globalCompositeOperation = 'multiply'
 
   @opacity = @chance.floating {min: 0.5, max: 1}
@@ -77,17 +79,16 @@ art.makeParticles = ->
 # Overwrite the GenArt tick function and customize
 # This function is called every time the art is ticked
 art.tick = ->
-  if !@ticks
-    ticks = 0
-  @ticks++
+  # if !@ticks
+  #   @ticks = 0
+  # @ticks++
 
-  stepMax = @chance.integer {min: 1, max: 16}
+  stepMax = @chance.integer {min: 1, max: 20}
   @data.forEach((d,i) =>
     ###########################
     #   Modify each particle  #
     ###########################
     noiseValue = @simplex.noise2D(d.x, d.y) * 0.25
-
 
     if @chance.bool {likelihood: 20}
       d.angleStep += noiseValue * @chance.floating({min: 0.001, max: 12})
@@ -158,9 +159,9 @@ art.tick = ->
   )
 
   if !@limitTicks
-    requestAnimationFrame @tick
+    requestAnimationFrame @tick.bind(this)
   else if @ticks < @numTicks
-    requestAnimationFrame @tick
+    requestAnimationFrame @tick.bind(this)
   else if @limitTicks && @ticks is @numTicks
     cancelAnimationFrame @rafAnimation
 

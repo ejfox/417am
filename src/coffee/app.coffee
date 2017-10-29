@@ -2,7 +2,9 @@ d3 = require('d3')
 $ = require('jquery')
 
 GenArt = require('./GenArt')
-example1 = require('./10-8-4')
+example2 = require('./10-8-4')
+example3 = require('./10-3-2')
+example4 = require('./10-7-2')
 
 # waypoints = []
 # waypointCount = 0
@@ -25,7 +27,7 @@ example1 = require('./10-8-4')
 
 section1 = new Waypoint(
   element: document.getElementById('example-1')
-  offset: '65%'
+  offset: '55%'
   handler: (direction) ->
     example = new GenArt(+ new Date, {
       elementSelector: '#example-1'
@@ -45,13 +47,39 @@ section1 = new Waypoint(
 
 section2 = new Waypoint(
   element: document.getElementById('example-2')
-  offset: '65%'
+  offset: '55%'
   handler: (direction) ->
-    example1.init({
+    example2.init({
       elementSelector: '#example-2'
       numTicks: 1000
       limitTicks: true
       # limitTicks: false
+      bgColor: 'white'
+    })
+)
+
+section3 = new Waypoint(
+  element: document.getElementById('example-3')
+  offset: '55%'
+  handler: (direction) ->
+    example3.init({
+      elementSelector: '#example-3'
+      numTicks: 1000
+      # limitTicks: true
+      limitTicks: true
+      bgColor: 'white'
+    })
+)
+
+section4 = new Waypoint(
+  element: document.getElementById('example-4')
+  offset: '55%'
+  handler: (direction) ->
+    example4.init({
+      elementSelector: '#example-4'
+      numTicks: 1000
+      # limitTicks: true
+      limitTicks: true
       bgColor: 'white'
     })
 )

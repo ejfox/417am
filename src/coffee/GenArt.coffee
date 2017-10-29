@@ -37,6 +37,8 @@ class GenArt
     @ctx.fillRect(0, 0, @width, @height)
 
   init: (options = {}, callback) =>
+    if @rafAnimation
+      cancelAnimationFrame @rafAnimation
     if options
       console.log('Options received on init!', options)
       Object.assign(this, options)
@@ -49,11 +51,19 @@ class GenArt
 
     if @randomizeCount
       countMin = _.clamp(@count * 0.25, 1, 100)
-      @count = @chance.integer {min: @count * 0.25, max: @count}
+      @count = @chance.integer {min: countMin, max: @count}
     if @randomizeTicks
       @numTicks = @chance.integer {min: @numTicks * 0.1, max: @numTicks}
-
     @makeCanvas()
+
+    @canvas.addEventListener('mousedown', =>
+      @init()
+    )
+
+    @ctx.globalCompositeOperation = 'source-over'
+    @ctx.fillStyle = @bgColor
+    @ctx.fillRect(0, 0, @width, @height)
+
     @makeParticles()
     @tickTil(@numTicks)
 
@@ -107,9 +117,9 @@ class GenArt
     )
 
     if !@limitTicks
-      requestAnimationFrame @tick
+      requestAnimationFrame @tick.bind(this)
     else if @ticks < @numTicks
-      requestAnimationFrame @tick
+      requestAnimationFrame @tick.bind(this)
     else if @limitTicks && @ticks is @numTicks
       cancelAnimationFrame @rafAnimation
 
@@ -118,7 +128,7 @@ class GenArt
     console.time('Ticked for')
     # for [0..count]
     #   @tick()
-    @rafAnimation = requestAnimationFrame @tick
+    @rafAnimation = requestAnimationFrame @tick.bind(this)
     console.timeEnd('Ticked for')
 
 module.exports = GenArt
