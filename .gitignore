@@ -1,4 +1,3 @@
-build/
 node_modules/
 src/js/[^.]*
 !src/js/lib
