@@ -1,0 +1,69 @@
+{
+  "name": "starter",
+  "description": "Starter/boilerplate",
+  "version": "0.0.3",
+  "author": "EJ Fox <ejfox@ejfox.com>",
+  "bugs": {
+    "url": "https://github.com/ejfox/starter/issues"
+  },
+  "contributors": "Gerald Rich <grich@vocativ.com>",
+  "dependencies": {
+    "chance": "^1.0.12",
+    "coffee-script": "^1.12.5",
+    "d3": "^4.11.0",
+    "d3-node": "^1.1.1",
+    "d3-selection-multi": "^1.0.1",
+    "d3-tip": "^0.7.1",
+    "fs": "0.0.1-security",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "nib": "^1.1.2",
+    "nice-color-palettes": "^2.0.0",
+    "simplex-noise": "^2.3.0",
+    "stylus": "^0.54.5",
+    "tabletop": "^1.5.2",
+    "topojson": "^3.0.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-bower": "^0.0.13",
+    "gulp-coffee": "^2.3.4",
+    "gulp-coffeelint": "^0.6.0",
+    "gulp-exec": "^2.1.3",
+    "gulp-filesize": "^0.0.6",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-mustache-plus": "^1.0.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1",
+    "webpack": "^3.6.0",
+    "webpack-stream": "^4.0.0"
+  },
+  "homepage": "https://github.com/ejfox/starter",
+  "main": "gulpfile.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ejfox/starter"
+  },
+  "scripts": {
+    "github": "gulp github",
+    "init": "npm install; gulp git-reset;atom .;gulp",
+    "reset": "gulp git-reset",
+    "start": "gulp"
+  }
+}

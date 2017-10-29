@@ -1,0 +1,14 @@
+{
+  "development": true,
+  "project": {
+    "org": "ejfox",
+    "twitterhandle": "mrejfox",
+    "name": "Starter Project",
+    "slug": "starter",
+    "description": "",
+    "gaCode": ""
+  },
+  "website": {
+    "port": 8888
+  }
+}

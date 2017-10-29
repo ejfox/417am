@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<title>{{ project.name }}</title>
+<meta name="description" content="{{ project.description }}" />
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ project.twitterhandle }}">
+<meta name="twitter:title" content="{{ project.title }}">
+<meta name="twitter:description" content="{{ project.description }}">
+<meta name="twitter:creator" content="@{{ project.twitterhandle }}">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<!-- <meta name="twitter:image" content="img/og_image.png"> -->
+
+<!-- Open Graph data -->
+<meta property="og:title" content="{{ project.title }}" />
+<meta property="og:type" content="article" />
+<!-- <meta name="twitter:image" content="img/og_image.png"> -->
+<meta property="og:description" content="{{ project.description }}" />
+<meta property="og:site_name" content="{{ project.org }}" />
+<!-- <meta property="fb:admins" content="Facebook numeric ID" /> -->
+
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '{{ project.gaCode }}', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
