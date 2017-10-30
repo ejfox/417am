@@ -48,6 +48,8 @@ section1 = new Waypoint(
 # bonus points for doing it without modifying
 # artscripts from the twitter bot too much
 
+defaultTicks = 500
+
 section2 = new Waypoint(
   element: document.getElementById('example-2')
   offset: globalOffset
@@ -55,7 +57,7 @@ section2 = new Waypoint(
     if direction is 'down'
       example2.init({
         elementSelector: '#example-2'
-        numTicks: 1000
+        numTicks: defaultTicks
         limitTicks: true
         # limitTicks: false
         bgColor: 'white'
@@ -69,7 +71,7 @@ section3 = new Waypoint(
     if direction is 'down'
       example3.init({
         elementSelector: '#example-3'
-        numTicks: 1000
+        numTicks: defaultTicks
         # limitTicks: true
         limitTicks: true
         bgColor: 'white'
@@ -83,9 +85,9 @@ section4 = new Waypoint(
     if direction is 'down'
       example4.init({
         elementSelector: '#example-4'
-        numTicks: 1000
+        numTicks: defaultTicks
         # limitTicks: true
-        limitTicks: true
+        limitTicks: false
         bgColor: 'white'
       })
 )

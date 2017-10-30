@@ -3071,7 +3071,7 @@ var Chance,
       return function () {
         return i.init();
       };
-    }(this)), this.ctx.globalCompositeOperation = "source-over", this.ctx.fillStyle = this.bgColor, this.ctx.fillRect(0, 0, this.width, this.height), this.makeParticles(), this.tickTil(this.numTicks), i.save && this.saveFile(), t) return t();
+    }(this)), this.ctx.globalCompositeOperation = "source-over", this.ctx.fillStyle = this.bgColor, this.ctx.fillRect(0, 0, this.width, this.height), this.makeParticles(), this.ticks = 0, this.tickTil(this.numTicks), i.save && this.saveFile(), t) return t();
   }, i.prototype.makeParticles = function () {
     return console.log("Making " + this.count + " particles"), this.data = d3.range(this.count).map(function (i) {
       return function () {
@@ -34298,14 +34298,14 @@ module.exports = [["#69d2e7","#a7dbd8","#e0e4cc","#f38630","#fa6900"],["#fe4365"
 "use strict";
 
 
-var $, GenArt, d3, example2, example3, example4, globalOffset, section1, section2, section3, section4;d3 = __webpack_require__(21), $ = __webpack_require__(468), GenArt = __webpack_require__(49), example2 = __webpack_require__(475), example3 = __webpack_require__(477), example4 = __webpack_require__(480), globalOffset = "60%", section1 = new Waypoint({ element: document.getElementById("example-1"), offset: globalOffset, handler: function handler(e) {
+var $, GenArt, d3, defaultTicks, example2, example3, example4, globalOffset, section1, section2, section3, section4;d3 = __webpack_require__(21), $ = __webpack_require__(468), GenArt = __webpack_require__(49), example2 = __webpack_require__(475), example3 = __webpack_require__(477), example4 = __webpack_require__(480), globalOffset = "60%", section1 = new Waypoint({ element: document.getElementById("example-1"), offset: globalOffset, handler: function handler(e) {
     if ("down" === e) return new GenArt(+new Date(), { elementSelector: "#example-1", numTicks: 1e3, limitTicks: !0, bgColor: "white" }).init();
-  } }), section2 = new Waypoint({ element: document.getElementById("example-2"), offset: globalOffset, handler: function handler(e) {
-    if ("down" === e) return example2.init({ elementSelector: "#example-2", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
+  } }), defaultTicks = 500, section2 = new Waypoint({ element: document.getElementById("example-2"), offset: globalOffset, handler: function handler(e) {
+    if ("down" === e) return example2.init({ elementSelector: "#example-2", numTicks: defaultTicks, limitTicks: !0, bgColor: "white" });
   } }), section3 = new Waypoint({ element: document.getElementById("example-3"), offset: globalOffset, handler: function handler(e) {
-    if ("down" === e) return example3.init({ elementSelector: "#example-3", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
+    if ("down" === e) return example3.init({ elementSelector: "#example-3", numTicks: defaultTicks, limitTicks: !0, bgColor: "white" });
   } }), section4 = new Waypoint({ element: document.getElementById("example-4"), offset: globalOffset, handler: function handler(e) {
-    if ("down" === e) return example4.init({ elementSelector: "#example-4", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
+    if ("down" === e) return example4.init({ elementSelector: "#example-4", numTicks: defaultTicks, limitTicks: !1, bgColor: "white" });
   } });
 
 /***/ }),

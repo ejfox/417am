@@ -65,6 +65,7 @@ class GenArt
     @ctx.fillRect(0, 0, @width, @height)
 
     @makeParticles()
+    @ticks = 0
     @tickTil(@numTicks)
 
     if options.save
