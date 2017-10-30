@@ -25,18 +25,21 @@ example4 = require('./10-7-2')
 #       example.init()
 #   )
 
+globalOffset = '60%'
+
 section1 = new Waypoint(
   element: document.getElementById('example-1')
-  offset: '55%'
+  offset: globalOffset
   handler: (direction) ->
-    example = new GenArt(+ new Date, {
-      elementSelector: '#example-1'
-      numTicks: 1000
-      limitTicks: true
-      # limitTicks: false
-      bgColor: 'white'
-    })
-    example.init()
+    if direction is 'down'
+      example = new GenArt(+ new Date, {
+        elementSelector: '#example-1'
+        numTicks: 1000
+        limitTicks: true
+        # limitTicks: false
+        bgColor: 'white'
+      })
+      example.init()
 )
 
 # TODO Figure out how to modify GenArt
@@ -47,39 +50,42 @@ section1 = new Waypoint(
 
 section2 = new Waypoint(
   element: document.getElementById('example-2')
-  offset: '55%'
+  offset: globalOffset
   handler: (direction) ->
-    example2.init({
-      elementSelector: '#example-2'
-      numTicks: 1000
-      limitTicks: true
-      # limitTicks: false
-      bgColor: 'white'
-    })
+    if direction is 'down'
+      example2.init({
+        elementSelector: '#example-2'
+        numTicks: 1000
+        limitTicks: true
+        # limitTicks: false
+        bgColor: 'white'
+      })
 )
 
 section3 = new Waypoint(
   element: document.getElementById('example-3')
-  offset: '55%'
+  offset: globalOffset
   handler: (direction) ->
-    example3.init({
-      elementSelector: '#example-3'
-      numTicks: 1000
-      # limitTicks: true
-      limitTicks: true
-      bgColor: 'white'
-    })
+    if direction is 'down'
+      example3.init({
+        elementSelector: '#example-3'
+        numTicks: 1000
+        # limitTicks: true
+        limitTicks: true
+        bgColor: 'white'
+      })
 )
 
 section4 = new Waypoint(
   element: document.getElementById('example-4')
-  offset: '55%'
+  offset: globalOffset
   handler: (direction) ->
-    example4.init({
-      elementSelector: '#example-4'
-      numTicks: 1000
-      # limitTicks: true
-      limitTicks: true
-      bgColor: 'white'
-    })
+    if direction is 'down'
+      example4.init({
+        elementSelector: '#example-4'
+        numTicks: 1000
+        # limitTicks: true
+        limitTicks: true
+        bgColor: 'white'
+      })
 )

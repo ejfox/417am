@@ -34298,14 +34298,14 @@ module.exports = [["#69d2e7","#a7dbd8","#e0e4cc","#f38630","#fa6900"],["#fe4365"
 "use strict";
 
 
-var $, GenArt, d3, example2, example3, example4, section1, section2, section3, section4;d3 = __webpack_require__(21), $ = __webpack_require__(468), GenArt = __webpack_require__(49), example2 = __webpack_require__(475), example3 = __webpack_require__(477), example4 = __webpack_require__(480), section1 = new Waypoint({ element: document.getElementById("example-1"), offset: "55%", handler: function handler(e) {
-    return new GenArt(+new Date(), { elementSelector: "#example-1", numTicks: 1e3, limitTicks: !0, bgColor: "white" }).init();
-  } }), section2 = new Waypoint({ element: document.getElementById("example-2"), offset: "55%", handler: function handler(e) {
-    return example2.init({ elementSelector: "#example-2", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
-  } }), section3 = new Waypoint({ element: document.getElementById("example-3"), offset: "55%", handler: function handler(e) {
-    return example3.init({ elementSelector: "#example-3", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
-  } }), section4 = new Waypoint({ element: document.getElementById("example-4"), offset: "55%", handler: function handler(e) {
-    return example4.init({ elementSelector: "#example-4", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
+var $, GenArt, d3, example2, example3, example4, globalOffset, section1, section2, section3, section4;d3 = __webpack_require__(21), $ = __webpack_require__(468), GenArt = __webpack_require__(49), example2 = __webpack_require__(475), example3 = __webpack_require__(477), example4 = __webpack_require__(480), globalOffset = "60%", section1 = new Waypoint({ element: document.getElementById("example-1"), offset: globalOffset, handler: function handler(e) {
+    if ("down" === e) return new GenArt(+new Date(), { elementSelector: "#example-1", numTicks: 1e3, limitTicks: !0, bgColor: "white" }).init();
+  } }), section2 = new Waypoint({ element: document.getElementById("example-2"), offset: globalOffset, handler: function handler(e) {
+    if ("down" === e) return example2.init({ elementSelector: "#example-2", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
+  } }), section3 = new Waypoint({ element: document.getElementById("example-3"), offset: globalOffset, handler: function handler(e) {
+    if ("down" === e) return example3.init({ elementSelector: "#example-3", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
+  } }), section4 = new Waypoint({ element: document.getElementById("example-4"), offset: globalOffset, handler: function handler(e) {
+    if ("down" === e) return example4.init({ elementSelector: "#example-4", numTicks: 1e3, limitTicks: !0, bgColor: "white" });
   } });
 
 /***/ }),
