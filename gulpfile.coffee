@@ -35,6 +35,8 @@ gulp.task "build", [
   "mustache"
   "data"
   "img"
+  "watch"
+  "webserver"
 ], -> gulp
 
 # Remove previous git data and init fresh
@@ -117,7 +119,7 @@ gulp.task "data", ->
 
 # Copy raster images from /img/ to /build/img/
 gulp.task "img", ->
-  gulp.src(["./source/img/*.png", "./source/img/*.gif", "./source/img/*.jpg"])
+  gulp.src(["./src/img/*.png", "./src/img/*.gif", "./src/img/*.jpg", "./src/img/**/*"])
   .pipe plugins.filesize()
   .pipe gulp.dest("./build/img/")
 

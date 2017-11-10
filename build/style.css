@@ -76,3 +76,4 @@ h1,h2,h3,p,ul{padding:4px}
 }
 h2,h3{font-weight:300}
 p{margin-bottom:1.2em}
+.splinescroller-container img{display:block;width:100%;height:auto;margin:0;padding:0}
