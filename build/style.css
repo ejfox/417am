@@ -48,6 +48,7 @@ em{background:rgba(215,215,215,.5)}
 .grid .golden-small,.grid .w-g-s{width:38.2716%}
 .grid .golden-large,.grid .w-g-l{width:61.7283%}
 .grid:after,.grid:before{display:table;content:"";line-height:0}
+h1,h2,h3{line-height:1.1em}
 .align-left{text-align:left}
 .align-right{text-align:right}
 .pull-left{float:left}
@@ -67,14 +68,14 @@ em{background:rgba(215,215,215,.5)}
 @font-face{font-family:'Work Sans';font-style:normal;font-weight:900;src:local('Work Sans Black'),local('WorkSans-Black'),url(https://fonts.gstatic.com/s/worksans/v3/Hjn0acvjHfjY_vAK9Uc6gonF5uFdDttMLvmWuJdhhgs.ttf) format('truetype')}
 body{-webkit-tap-highlight-color:#d7d7d7;font-family:'Work Sans','Helvetica Neue',Helvetica,sans-serif;font-size:1.2em;line-height:1.4em}
 canvas{width:100%;display:block;cursor:w-resize;margin:2em auto}
-h2,h3,p,ul{max-width:620px;margin-left:auto;margin-right:auto}
-h1{font-weight:900;margin-top:20vh;margin-bottom:20vh;font-size:4.2em;text-align:center}
-@media (min-width:320px){h1{padding:.5em}
+h2,h3,p,ul{max-width:620px;margin-left:auto;margin-right:auto;padding:8px}
+h1{font-weight:900;margin-top:20vh;margin-bottom:20vh;font-size:4em;text-align:center}
+@media (min-width:320px){h1{padding:.25em}
 }
 @media (max-width:320px){#container{padding:8px}
-h1,h2,h3,p,ul{padding:4px}
+h1{padding:4px}
 }
-h2,h3{font-weight:300;line-height:1.1em;margin-bottom:.5em}
+h2,h3{font-weight:300;margin-bottom:.5em}
 p{margin-bottom:1.2em}
 ul{margin-bottom:1em}
 .splinescroller-container img{display:block;width:100%;height:auto;margin:0;padding:0}
