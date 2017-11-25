@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>I feel like the best nights are the ones when you're working on</title>
+</head>
+<body>
+<h1>How I got interested in Generative Art</h1>
+
+<p>I feel like the best nights are the ones when you're working on a project and you don't realize how late it's gotten. You've been adding and improving, bit by bit, and the end is in sight. </p>
+
+<p>People find these moments of flow through jogging or meditation or whatever. But for me, there is something special about convincing a computer to do what I want, especially when that means making a images dance on a screen. </p>
+
+<p>The spark was lit for me by seeing incredible work on Twitter by people like <a href="https://twitter.com/zachlieberman">Zach Lieberman</a> and <a href="https://twitter.com/inconvergent">Inconvergent</a>. They both freely offered information online about how they had convinced their computers to make such beautiful work. They shared enough to make me think that maybe, just maybe, this is something I could do. </p>
+
+<h3>Visualizing random data</h3>
+
+<p>I've been visualizing data <a href="http://www.niemanlab.org/2010/03/what-does-this-american-life-look-like-a-designer-visualizes-the-radio/">for years</a>. I've created bar charts and pie charts and sankey diagrams and network graphs and all sorts of visualizations on any topic that could be summed up in data. </p>
+
+<p>But this new project- generative art- was freeing. I wasn't visualizing data- I was visualizing randomness. I was sifting through the white noise on a television set and using that as my data.</p>
+
+<p>The art becomes deciding what parameters to give up to the computer and to randomness. I would build things that I felt looked nice and then slowly change the code and say &quot;okay, now you decide how to do that&quot; or &quot;now you decide where we start that line&quot;. A lot of the time is spent deciding just how much control to give over. </p>
+
+<p>You can take a canvas and give randomness full control. You can say &quot;computer, draw 100 points, and put those points wherever you want (as long as they're on the canvas).&quot; </p>
+
+<canvas class="canvas-example" id="example-1" height="420px" width="1020px"></canvas>
+
+<p>But what you end up with is a lot like that white noise that comes on your TV when you're tuned into the electromagnetic hum of the galaxy instead of the local news. The real art is in deciding how much control to give over to the computer, and in what places. In a lot of ways this felt like a form of education. </p>
+
+<p>As I wrote new lines of code I felt myself teaching my robot the unspoken rules of art the way you'd teach a child. &quot;These colors work well together&quot;, &quot;try to make it so your lines don't overlap&quot;, &quot;if you reach the edge of the canvas, go in a different direction&quot;, and so on. </p>
+
+<canvas class="canvas-example" id="example-2" height="420px" width="1020px"></canvas>
+
+<p>Sometimes I feel like I understand God better when I work with my art robot. I often wonder, if there were a creator, why he would allow such catastrophic imperfection in the world. </p>
+
+<p>But you realize that the best things in life are the things that you do not expect. Things that happen when the right combination of factors occur at just the right second and something you never anticipated happens. </p>
+
+<p>But to get to those gold-plated moments of synchronicity you have to sort through a lot of things that aren't good. It requires wading through all those failures to find a little piece of magic. Or maybe all those failures is what makes finding it feel so good.</p>
+
+<h1>Learning from randomness</h1>
+
+<p>I've been trying to create scripts that can have results that look very diverse, even though it is roughly the same logic that creates it.</p>
+
+<canvas class="canvas-example" id="example-3" height="1020px" width="1020px"></canvas>
+
+<p>But I think I am running into the limits of how varied those things can truly be based simply on random numbers. </p>
+
+<p>When I am beginning to make a new script I will start by creating something that I think looks cool without any randomness. Then I begin to pick out parameters that I can give over to randomness. </p>
+
+<p>Things like how many lines to make, how quickly to move them, which direction they should move in, things like that. </p>
+
+<canvas class="canvas-example" id="example-4" height="720px" width="1020px"></canvas>
+
+<p>This means when the scripts are run you never see the same thing twice. But truly 'creative' outputs are very rare. Most of the outputs will look the same, but every once in a while there will be one that is exceptional. </p>
+
+<p>I think this is part of the reason that following a randomized art bot on Twitter is so enjoyable. It's like a slot machine with a lever being pulled again and again until you get a result you like. </p>
+
+<p>I think the process of running and re-running the art bot scratches a similar itch in my brain. </p>
+
+<p>I create new scripts every once in a while after work or on the week. I'll add the ones I like to the list of scripts that the artbot runs every hour. </p>
+
+<p>I check his feed every day and go back through the work he's been making and retweet or fave any that I think are going in a good direction. </p>
+
+<p>But I wish that I could do things like say to him &quot;more of this&quot; and &quot;more of that&quot; and actually affect the process. I want to start teaching him which random numbers work and which don't. </p>
+
+<h2>Smart people have already figured a lot of things out</h2>
+
+<p>Luckily for me this bumps right into a technology currently in vogue: genetic algorithms. Like nearly everything in my life, I barely understand it, but people smarter than me have explained enough that I feel comfortable enough to operate the levers. I will now attempt to explain this thing I do not understand. </p>
+
+<p>One of the earliest examples I ever encountered was <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>. As a wannabe teenage-hacker I went to a hacker conference in New York and saw someone with 5 dots on their wrist in a formation I would later learn was referred to as a 'Glider', a formation would continue to move and live forever.</p>
+
+<!-- <hr />
+
+<p>VISUAL EXAMPLE 07
+Glider in game of life simulation</p>
+
+<hr /> -->
+
+<p>It was also adopted as the <a href="http://www.catb.org/hacker-emblem/">hacker emblem</a> by Eric S. Raymond. I'd later tattoo that symbol on my left wrist as a reminder to stick to my hacker roots. It's worked pretty well. </p>
+
+<p>The Game of Life is made up a grid of cells. The cells follow 4 simple rules: </p>
+
+<blockquote>
+<p>Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</p>
+
+<p>Any live cell with two or three live neighbours lives on to the next generation.</p>
+
+<p>Any live cell with more than three live neighbours dies, as if by overpopulation.</p>
+
+<p>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p>
+</blockquote>
+
+<p>From these 4 simple rules, you can make incredibly complicated patterns and even things like clocks. </p>
+
+<h2>Genetic algorithms for art</h2>
+
+<p>I want to use a parallel technique to teach my art robot using a genetic algorithm. But I want to make that algorithm something more like:</p>
+
+<ul>
+<li>Every hour make some art and tweet it out</li>
+<li>If that art is good, make more of that</li>
+</ul>
+
+<p>Which sounds simple enough for an idiot like me to try and tackle. </p>
+
+<p>Some of you may be seeing some problems with this plan already. Namely, how do you teach a robot what art is &quot;good&quot;? I feel like this is a difficult thing to teach humans, let alone robots. </p>
+
+<p>Maybe instead of saying we want to make art that is good, we want the robot to make art that people like. This is something closer to something it can understand. </p>
+
+<p>So I tell the art robot that every time he tweets some art, that if someone retweets it or faves it, that means somebody probably likes it. If someone likes the art, then make more art like that. In this way he gains his own sort of personality, inspired by his small group of fans (20 followers, a portion of them other art robots). </p>
+
+<h1>Creating a DNA for artistic approaches</h1>
+
+<p>This sounds simple, but how do I teach him to learn what his followers like? </p>
+
+<p>Take one art script for example. It starts with a bunch of random points, and then connects them all together with a smoothed line. Then it randomly moves all of the points again and draws another line. It does this a couple of thousand times. Random numbers can affect a lot of different things in this relatively simple piece of art.</p>
+
+<ul>
+<li>The number of points</li>
+<li>How offset their starting positions are from the middle</li>
+<li>How smooth the line is</li>
+<li>How much to change the color of the line on each step</li>
+<li>How much each random point should move</li>
+</ul>
+
+<!-- <hr />
+
+<p>VISUAL EXAMPLE 08
+Small multiple example of same art script, but with single meta-parameter changed for each example:</p>
+
+<ul>
+<li>The number of points</li>
+<li>How offset their starting positions are from the middle</li>
+<li>How smooth the line is</li>
+<li>How much to change the color of the line on each step</li>
+<li>How much each random point should move</li>
+</ul>
+
+<p>Clicking re-generates </p>
+
+<hr /> -->
+
+<p>If we take those 5 numbers we can store them and think of them as the DNA of that piece of art. Small changes to those numbers can have big effects. </p>
+
+<p>This is the genome of one 'strain' of art for this script. It represents one way of thinking about approaching making this piece of art. </p>
+
+<p>The way that most genetic algorithms work is by taking some concept and representing it as some numbers. Then it somehow judges the &quot;fitness&quot; of that group of numbers. The more &quot;fit&quot; a genome is, the more likely it is to live on to the next generation.</p>
+
+<p>The program generates thousands of genomes, determines how &quot;fit&quot; they are, and then combines them into a new genome. Two fit parents ideally create an even more fit child. </p>
+
+<p>To us, something is &quot;fit&quot; if people on Twitter like it. </p>
+
+<p>At least that's how I'd like my art robot's mind to work. </p>
+
+<p>He goes on and on for hundreds and hundreds of generations of creations until he has evolved to have his work featured in the MoMa. A parent can dream. </p>
+
+<p>By the way, though I often refer to my art robot as &quot;him&quot; because it delights me, he obviously has no gender because I have not taught him about sex, genders, or even language yet. </p>
+
+<p>Speaking of which, I suppose some malicious party on Twitter could work diligently to teach the art robot to only make works that say, looked like penises. </p>
+
+<p>This is one of the <a href="http://www.managingcommunities.com/2015/06/04/lego-universes-penis-problem-and-why-moderation-efforts-arent-hopeless/">most common problems</a> in <a href="https://www.huffingtonpost.com/2014/07/28/penis-art-guide_n_5614173.html">any</a> <a href="https://io9.gizmodo.com/a-brief-history-of-hiding-dicks-in-cartoons-1818669667">visual</a> piece of technology that humans <a href="http://taskandpurpose.com/short-history-military-personnel-drawing-dicks-sky/">can interact with</a>. </p>
+
+<p>But I guess we'll cross that bridge when we come to it. I think in the future we will have AI trainers like we have dog trainers today. You will call in the <a href="https://en.wikipedia.org/wiki/Cesar_Millan">Cesar Milan</a> of artificial intelligence when your robot develops particularly problematic behaviors.</p>
+
+<h2>How to build your art robot a mind</h2>
+
+<p>You might be wondering &quot;that sounds great, but how are you actually going to figure out how to build a mind for your art robot?&quot; Which is a pretty good question. The answer, as always, is Google. </p>
+
+<p>Another stroke of luck for me is that the programming language I learned when I was 14 to make animated navigation menus on my myspace-era website can now be used to simulate neural networks and genetic algorithms. </p>
+
+<p>I was able to find a nice library called, fittingly <a href="https://github.com/subprotocol/genetic-js">Genetic.js</a>. Thanks again, smart people. </p>
+
+<p>The <a href="http://subprotocol.com/">smart person</a> who made this has done all of the hard work of whatever genetic algorithms do and all I need to do is give it genomes and tell it how to judge fitness. </p>
+
+<p>Unfortunately, most genetic algorithms are built to run hundreds or thousands of times a second, rapidly evolving and improving. They are using things like MATH to figure out how &quot;fit&quot; their genomes are. We are using HUMANS and as we know humans are slow, especially when we compare them to computers.</p>
+
+<p>Our art robot runs once every hour. Every hour it should take a moment to sit back and think back to every piece of art it has ever made before, and think about the pieces that people liked. </p>
+
+<p>Then it should take the ones people liked the most and make a new piece of art based on that. </p>
+
+<p>This means that we need to give the art robot a memory. </p>
+
+<h3>Building your art robot a memory</h3>
+
+<p>To be continued...</p>
+</body>
+</html>
